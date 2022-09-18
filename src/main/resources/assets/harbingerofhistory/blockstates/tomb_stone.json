@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "harbingerofhistory:block/tomb_stone" },
+    "facing=east": { "model": "harbingerofhistory:block/tomb_stone", "y":  90},
+    "facing=south": { "model": "harbingerofhistory:block/tomb_stone", "y": 180 },
+    "facing=west": { "model": "harbingerofhistory:block/tomb_stone", "y": 270 }
+  }
+}

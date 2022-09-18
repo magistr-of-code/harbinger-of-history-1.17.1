@@ -1,0 +1,15 @@
+ {
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.maxmag_change.harbingerofhistory.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ModEntityDataSaverMixin"
+  ],
+  "client": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
