@@ -15,6 +15,7 @@ import net.maxmag_change.harbingerofhistory.event.PlayerTick;
 import net.maxmag_change.harbingerofhistory.item.ModItemGroup;
 import net.maxmag_change.harbingerofhistory.item.ModItems;
 import net.maxmag_change.harbingerofhistory.networking.ModMessages;
+import net.maxmag_change.harbingerofhistory.world.dimension.ModDimensions;
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
 import org.apache.logging.log4j.LogManager;
@@ -49,6 +50,8 @@ public class HarbingerOfHistory implements ModInitializer {
 		ServerEntityCombatEvents.AFTER_KILLED_OTHER_ENTITY.register(new KilledEntity());
 		ServerPlayerEvents.ALLOW_DEATH.register(new DeadPlayer());
 		LOGGER.info("Hello Fabric world!");
+
+		ModDimensions.register();
 
 	}
 }
