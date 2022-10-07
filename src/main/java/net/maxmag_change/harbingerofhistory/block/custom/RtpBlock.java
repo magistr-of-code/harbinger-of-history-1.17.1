@@ -17,6 +17,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 
 import java.awt.*;
@@ -28,28 +29,31 @@ public class RtpBlock extends Block {
     }
 
     @Override
-    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if(entity instanceof LivingEntity player) {
             MinecraftServer server = world.getServer();
             if (!world.isClient) {
-                ServerWorld overWorld = server.getWorld(World.OVERWORLD);
-                ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
-                int RandowZ = getRandom(10000, 1);
-                int RandowX = getRandom(10000, 1);
+                if (world.getRegistryKey() == ModDimensions.SPAWN_DIMENSION_KEY) {
+                    ServerWorld overWorld = server.getWorld(World.OVERWORLD);
+                    ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
+                    int RandowZ = getRandom(10000, 1);
+                    int RandowX = getRandom(10000, 1);
 
-                serverPlayer.teleport(overWorld,RandowX,100,RandowZ,serverPlayer.bodyYaw, serverPlayer.prevPitch);
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 70, 255));
+                    serverPlayer.teleport(overWorld,RandowX,100,RandowZ,serverPlayer.bodyYaw, serverPlayer.prevPitch);
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 70, 255));
+                    serverPlayer.changeGameMode(GameMode.SURVIVAL);
+                }
+                else {
+                    ServerWorld spawn = server.getWorld(ModDimensions.SPAWN_DIMENSION_KEY);
+                    ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
+                    serverPlayer.changeGameMode(GameMode.ADVENTURE);
+                    serverPlayer.teleport(spawn,44,108,2,serverPlayer.bodyYaw, serverPlayer.prevPitch);
+                }
             }
         }
-
-
-
-
-
-
-
-        super.onSteppedOn(world, pos, state, entity);
+        super.onEntityCollision(state, world, pos, entity);
     }
+
 
     private int getRandom(int max, int min) {
         int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);

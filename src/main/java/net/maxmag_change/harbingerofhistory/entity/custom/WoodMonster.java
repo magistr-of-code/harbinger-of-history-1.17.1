@@ -45,8 +45,14 @@ public class WoodMonster extends HostileEntity implements IAnimatable {
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
+        boolean idle = false;
         if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wood_monster.walk", true));
+            idle = false;
+            return PlayState.CONTINUE;
+        }
+        if (idle == true) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wood_monster.super_idle", true));
             return PlayState.CONTINUE;
         }
 
