@@ -47,13 +47,12 @@ public class RtpBlock extends Block {
                     ServerWorld spawn = server.getWorld(ModDimensions.SPAWN_DIMENSION_KEY);
                     ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
                     serverPlayer.changeGameMode(GameMode.ADVENTURE);
-                    serverPlayer.teleport(spawn,44,108,2,serverPlayer.bodyYaw, serverPlayer.prevPitch);
+                    serverPlayer.teleport(spawn,0,108,0,serverPlayer.bodyYaw, serverPlayer.prevPitch);
                 }
             }
         }
         super.onEntityCollision(state, world, pos, entity);
     }
-
 
     private int getRandom(int max, int min) {
         int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);

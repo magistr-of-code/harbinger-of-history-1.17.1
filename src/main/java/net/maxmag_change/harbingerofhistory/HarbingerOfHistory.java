@@ -15,6 +15,7 @@ import net.maxmag_change.harbingerofhistory.event.PlayerTick;
 import net.maxmag_change.harbingerofhistory.item.ModItemGroup;
 import net.maxmag_change.harbingerofhistory.item.ModItems;
 import net.maxmag_change.harbingerofhistory.networking.ModMessages;
+import net.maxmag_change.harbingerofhistory.util.ModRegistries;
 import net.maxmag_change.harbingerofhistory.world.dimension.ModDimensions;
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
@@ -33,6 +34,8 @@ public class HarbingerOfHistory implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModRegistries.registerModStuffs();
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GOLD_FENCE, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PIANO, RenderLayer.getCutout());

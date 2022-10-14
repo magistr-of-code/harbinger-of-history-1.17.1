@@ -1,33 +1,43 @@
 {
-  "item.harbingerofhistory.raw_tanzanite": "Сырой Тензанит",
+  "item.harbingerofhistory.raw_tanzanite": "Необработанный тензанит",
 
-  "item.harbingerofhistory.tanzanite_dagger": "Тензанитовый Нож",
+  "item.harbingerofhistory.tanzanite_dagger": "Тензанитовый кинжал",
 
-  "block.harbingerofhistory.scamp_ore": "Руда Скампа",
+  "block.harbingerofhistory.scamp_ore": "Руда скампа",
 
-  "block.harbingerofhistory.scamp_block": "Блок Скампа",
+  "block.harbingerofhistory.scamp_block": "Блок скампа",
 
-  "block.harbingerofhistory.tanzanite_block": "Блок Тензанита",
+  "block.harbingerofhistory.tanzanite_block": "Блок тензанита",
+
+  "block.harbingerofhistory.jumpy_block": "Алтарь прышка",
 
   "block.harbingerofhistory.gold_fence": "Золотой забор",
 
-  "block.harbingerofhistory.show_case": "Ветрина",
-
-  "block.harbingerofhistory.jumpy_block": "Алтарь Прыжка",
+  "block.harbingerofhistory.show_case": "Витрина",
 
   "itemGroup.harbingerofhistory.tanzanite": "Тензанит",
 
-  "itemGroup.harbingerofhistory.special": "Специальные",
+  "itemGroup.harbingerofhistory.special": "Особый",
 
   "itemGroup.harbingerofhistory.scamp": "Скамп",
 
-  "block.harbingerofhistory.piano": "Пианино",
+  "block.harbingerofhistory.piano": "Фортепиано",
 
-  "block.harbingerofhistory.quartz_fence": "Кварцивый Забор",
+  "block.harbingerofhistory.quartz_fence": "Кварцевый забор",
 
-  "block.harbingerofhistory.quartz_wall": "Кравцивая Стена",
+  "block.harbingerofhistory.quartz_wall": "Кварцевая стена",
 
   "block.harbingerofhistory.lantern": "Фонарь",
 
-  "block.harbingerofhistory.lantern_stand": "Фонарный столб"
+  "block.harbingerofhistory.lantern_stand": "Подставка для фонарей",
+
+  "block.harbingerofhistory.tomb_stone": "Могильный камень",
+
+  "text.harbingerofhistory.spawn_command_true": "Вы телепортировались на точку возрождения",
+
+  "massage.harbingerofhistory.spawn_command_false": "Вы не можете быть телепортированы на точку возрождения",
+
+  "massage.harbingerofhistory.money_output": "деньги: ",
+
+  "massage.harbingerofhistory.death_massage": "Деньги были взяты после смерти"
 }

@@ -9,17 +9,21 @@ import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 
 public class DeathC2SPacket {
 
+    private static final String MASSAGE = "massage.harbingerofhistory.death_massage";
+
     public static void receive(MinecraftServer server, ServerPlayerEntity player,
                                ServerPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender) {
+
         int haveMoney = ((IEntityDataSaver) player).getPersistentData().getInt("money");
         // Only server
         MoneyData.removeMoney(((IEntityDataSaver) player), haveMoney);
         //output message
         System.out.println("its working");
-        player.sendMessage(Text.of("Money taken for death").copy().fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+        player.sendMessage(new TranslatableText(MASSAGE).fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
     }
 }

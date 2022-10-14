@@ -7,8 +7,9 @@ import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.BossBar;
+import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -28,10 +29,15 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class WoodMonster extends HostileEntity implements IAnimatable {
+    private final ServerBossBar bossBar;
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public WoodMonster(EntityType<? extends HostileEntity> entityType, World world) {
+    public WoodMonster(EntityType<? extends WoodMonster> entityType, World world) {
         super(entityType, world);
+
+        //custom boss bar
+        this.bossBar = new ServerBossBar(this.getDisplayName(), BossBar.Color.YELLOW, BossBar.Style.PROGRESS);
+
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
