@@ -32,7 +32,7 @@ public class WoodMonster extends HostileEntity implements IAnimatable {
     private final ServerBossBar bossBar;
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public WoodMonster(EntityType<? extends WoodMonster> entityType, World world) {
+    public WoodMonster(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
 
         //custom boss bar

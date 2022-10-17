@@ -33,11 +33,13 @@
 
   "block.harbingerofhistory.tomb_stone": "Tomb Stone",
 
-  "text.harbingerofhistory.spawn_command_true": "You teleported to spawn",
+  "massage.harbingerofhistory.spawn_command_true": "You teleported to spawn",
 
   "massage.harbingerofhistory.spawn_command_false": "You cant't be teleported to spawn",
 
   "massage.harbingerofhistory.money_output": "money: ",
+
+  "massage.harbingerofhistory.dont_have_money": "You don't have money!",
 
   "massage.harbingerofhistory.death_massage": "Money taken from death"
 }

@@ -2,7 +2,8 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"animation.wood_monster.walk": {
-			"animation_length": 1.3,
+			"loop": true,
+			"animation_length": 1.33333,
 			"bones": {
 				"Legs": {
 					"rotation": {
@@ -17,29 +18,86 @@
 				},
 				"Rleg": {
 					"rotation": {
-						"vector": [0, 0, 0]
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.4167": {
+							"vector": [10, 0, 0]
+						},
+						"0.8333": {
+							"vector": [-12.5, 0, 0]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
 					},
 					"position": {
-						"vector": [0, 0, 0]
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.4167": {
+							"vector": [0, 0, 2]
+						},
+						"0.8333": {
+							"vector": [0, 0, -2]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
 					},
 					"scale": {
-						"vector": [1, 1, 1]
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"1.2917": {
+							"vector": [1, 1, 1]
+						}
 					}
 				},
 				"LLeg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.4167": {
+							"vector": [-15, 0, 0]
+						},
+						"0.8333": {
+							"vector": [17.5, 0, 0]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.4167": {
+							"vector": [0, 0, -1]
+						},
+						"0.8333": {
+							"vector": [0, 0, 4]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"1.2917": {
+							"vector": [1, 1, 1]
+						}
+					}
+				},
+				"Rup": {
 					"rotation": {
 						"vector": [0, 0, 0]
 					},
 					"position": {
 						"vector": [0, 0, 0]
-					},
-					"scale": {
-						"vector": [1, 1, 1]
-					}
-				},
-				"Rup": {
-					"scale": {
-						"vector": [1, 1, 1]
 					}
 				},
 				"Rdown": {
@@ -86,11 +144,6 @@
 						"1.2917": {
 							"vector": [0, 0, 0]
 						}
-					}
-				},
-				"Rupper2": {
-					"scale": {
-						"vector": [1, 1, 1]
 					}
 				},
 				"mask": {
@@ -148,6 +201,116 @@
 							"vector": [0, 0, 0]
 						}
 					}
+				},
+				"RArm": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [-6.05, 0, 0]
+						},
+						"0.9583": {
+							"vector": [17.5, 0, 0]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, -0.89]
+						},
+						"0.9583": {
+							"vector": [0, 0, 3]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"LArm": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [17.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [-6.05, 0, 0]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 3]
+						},
+						"1.0": {
+							"vector": [0, 0, -0.89]
+						},
+						"1.2917": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.6667": {
+							"vector": [1, 0, 0]
+						},
+						"1.3333": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.3333": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"HeadBone": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.6667": {
+							"vector": [0.67, 0, 0]
+						},
+						"1.3333": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.3333": {
+							"vector": [0, 0, 0]
+						}
+					}
 				}
 			}
 		},
@@ -183,14 +346,17 @@
 				"HeadBone": {
 					"rotation": {
 						"0.0": {
-							"vector": [2.5, 0, 0]
-						},
-						"0.875": {
 							"vector": [0, 0, 0]
 						},
-						"2.0": {
+						"1.0": {
 							"vector": [2.5, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
 						}
+					},
+					"position": {
+						"vector": [0, 0, 0]
 					}
 				},
 				"bone2": {
@@ -264,10 +430,26 @@
 							"vector": [0, 0, 0]
 						}
 					}
+				},
+				"LArm": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
 				}
 			}
 		},
-		"animation.wood_monster.attack": {
+		"animation.wood_monster.defult_attack": {
 			"animation_length": 1,
 			"bones": {
 				"LArm": {
@@ -301,7 +483,7 @@
 				}
 			}
 		},
-		"animation.wood_monster.damage": {
+		"animation.wood_monster.demage": {
 			"animation_length": 2,
 			"bones": {
 				"bone5": {
@@ -374,6 +556,14 @@
 						"2.0": {
 							"vector": [0, 0, 0]
 						}
+					}
+				},
+				"Rup": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
 					}
 				}
 			}

@@ -12,6 +12,5 @@ import net.minecraft.util.registry.Registry;
 public class ModEntity {
     public static final EntityType<WoodMonster> WOOD_MONSTER = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(HarbingerOfHistory.MOD_ID, "wood_monster"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, WoodMonster::new)
-                    .dimensions(EntityDimensions.fixed(1.5f,3f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, WoodMonster::new).dimensions(EntityDimensions.fixed(1.5f,3f)).build());
 }

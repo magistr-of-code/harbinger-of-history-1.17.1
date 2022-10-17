@@ -21,9 +21,11 @@ public class DeathC2SPacket {
 
         int haveMoney = ((IEntityDataSaver) player).getPersistentData().getInt("money");
         // Only server
-        MoneyData.removeMoney(((IEntityDataSaver) player), haveMoney);
-        //output message
-        System.out.println("its working");
-        player.sendMessage(new TranslatableText(MASSAGE).fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+        if (haveMoney != 0) {
+            MoneyData.removeMoney(((IEntityDataSaver) player), haveMoney);
+            //output message
+            System.out.println("money taken from dead");
+            player.sendMessage(new TranslatableText(MASSAGE).fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+        }
     }
 }

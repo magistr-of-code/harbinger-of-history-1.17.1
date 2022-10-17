@@ -7,6 +7,7 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Style;
+import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 
@@ -21,10 +22,10 @@ public class SpawnCommand {
     private static int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         if (context.getSource().getPlayer().getServerWorld().getRegistryKey() == ServerWorld.OVERWORLD) {
             context.getSource().getPlayer().requestTeleport(0, 255, 0);
-            context.getSource().getPlayer().sendMessage(new TranslatableText(MASSAGE_TRUE).fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), false);
+            context.getSource().getPlayer().sendMessage(Text.of(new  TranslatableText(MASSAGE_TRUE).getString()).copy().fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), false);
             return 1;
         } else {
-            context.getSource().getPlayer().sendMessage(new TranslatableText(MASSAGE_FALSE).fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+            context.getSource().getPlayer().sendMessage(Text.of(new TranslatableText(MASSAGE_FALSE).getString()).copy().fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
             return 0;
         }
     }

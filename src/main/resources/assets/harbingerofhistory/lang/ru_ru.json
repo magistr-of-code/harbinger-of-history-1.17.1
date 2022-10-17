@@ -39,5 +39,7 @@
 
   "massage.harbingerofhistory.money_output": "деньги: ",
 
+  "massage.harbingerofhistory.dont_have_money": "У вас нету денег!",
+
   "massage.harbingerofhistory.death_massage": "Деньги были взяты после смерти"
 }
