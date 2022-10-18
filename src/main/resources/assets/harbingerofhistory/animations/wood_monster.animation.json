@@ -1,8 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.wood_monster.walk": {
-			"loop": true,
+		"animation.model.walk": {
 			"animation_length": 1.33333,
 			"bones": {
 				"Legs": {
@@ -314,7 +313,7 @@
 				}
 			}
 		},
-		"animation.wood_monster.idle": {
+		"animation.model.idle": {
 			"animation_length": 2,
 			"bones": {
 				"Rdown": {
@@ -449,7 +448,7 @@
 				}
 			}
 		},
-		"animation.wood_monster.defult_attack": {
+		"animation.model.defult_attack": {
 			"animation_length": 1,
 			"bones": {
 				"LArm": {
@@ -483,7 +482,7 @@
 				}
 			}
 		},
-		"animation.wood_monster.demage": {
+		"animation.model.damage": {
 			"animation_length": 2,
 			"bones": {
 				"bone5": {
@@ -568,7 +567,7 @@
 				}
 			}
 		},
-		"animation.wood_monster.death": {
+		"animation.model.death": {
 			"animation_length": 10,
 			"bones": {
 				"Rup": {
@@ -858,7 +857,7 @@
 				}
 			}
 		},
-		"animation.wood_monster.low_chance_attack": {
+		"animation.model.low_chance_attack": {
 			"animation_length": 2,
 			"bones": {
 				"RArm": {

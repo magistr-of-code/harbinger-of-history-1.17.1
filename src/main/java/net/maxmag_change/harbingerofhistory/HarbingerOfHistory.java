@@ -1,24 +1,16 @@
 package net.maxmag_change.harbingerofhistory;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents;
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.maxmag_change.harbingerofhistory.block.ModBlocks;
 import net.maxmag_change.harbingerofhistory.entity.ModEntity;
-import net.maxmag_change.harbingerofhistory.entity.client.WoodMonsterRenderer;
+import net.maxmag_change.harbingerofhistory.entity.custom.Cacoda;
+import net.maxmag_change.harbingerofhistory.entity.custom.FireFly;
 import net.maxmag_change.harbingerofhistory.entity.custom.WoodMonster;
-import net.maxmag_change.harbingerofhistory.event.DeadPlayer;
-import net.maxmag_change.harbingerofhistory.event.KilledEntity;
-import net.maxmag_change.harbingerofhistory.event.PlayerTick;
 import net.maxmag_change.harbingerofhistory.item.ModItems;
 import net.maxmag_change.harbingerofhistory.networking.ModMessages;
 import net.maxmag_change.harbingerofhistory.util.ModRegistries;
 import net.maxmag_change.harbingerofhistory.world.dimension.ModDimensions;
-import net.minecraft.client.render.RenderLayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -45,6 +37,12 @@ public class HarbingerOfHistory implements ModInitializer {
 		//ServerEntityCombatEvents.AFTER_KILLED_OTHER_ENTITY.register(new KilledEntity());
 		//ServerPlayerEvents.ALLOW_DEATH.register(new DeadPlayer());
 		LOGGER.info("Hello Fabric world!");
+
+		FabricDefaultAttributeRegistry.register(ModEntity.WOOD_MONSTER, WoodMonster.setAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntity.FIREFLY, FireFly.setAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntity.CACODA, Cacoda.setAttributes());
 
 		ModDimensions.register();
 

@@ -51,18 +51,12 @@ public class WoodMonster extends HostileEntity implements IAnimatable {
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        boolean idle = false;
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wood_monster.walk", true));
-            idle = false;
-            return PlayState.CONTINUE;
-        }
-        if (idle == true) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wood_monster.super_idle", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.walk", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wood_monster.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.idle", true));
         return PlayState.CONTINUE;
     }
 
@@ -70,9 +64,9 @@ public class WoodMonster extends HostileEntity implements IAnimatable {
         if (this.handSwinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
             if (getRandom(4, 0) == 3) {
-                event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wood_monster.low_chance_attack", false));
+                event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.low_chance_attack", false));
         } else {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.wood_monster.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.attack", false));
         }
     }
 
