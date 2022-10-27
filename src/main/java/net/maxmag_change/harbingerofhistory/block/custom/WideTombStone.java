@@ -3,6 +3,7 @@ package net.maxmag_change.harbingerofhistory.block.custom;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.SoundEvents;
@@ -21,37 +22,50 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class TombStone extends Block {
+
+public class WideTombStone extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-    public TombStone(Settings settings) {
+    public WideTombStone(Settings settings) {
         super(settings);
     }
 
     private static final VoxelShape SHAPE_N = Stream.of(
-            Block.createCuboidShape(4, 2, 4, 12, 5, 12),
+            Block.createCuboidShape(4, 2, 2, 12, 3, 14),
+            Block.createCuboidShape(7, 3, 2, 9, 20, 14),
+            Block.createCuboidShape(7, 20, 3, 9, 21, 13),
+            Block.createCuboidShape(7, 21, 3.8000000000000007, 9, 22, 12),
+            Block.createCuboidShape(7, 22, 4.800000000000001, 9, 23, 11),
             Block.createCuboidShape(1, 1, 1, 15, 2, 15),
-            Block.createCuboidShape(0, 0, 0, 16, 1, 16),
-            Block.createCuboidShape(6, 5, 6, 10, 23, 10)
+            Block.createCuboidShape(0, 0, 0, 16, 1, 16)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     private static final VoxelShape SHAPE_W = Stream.of(
-            Block.createCuboidShape(4, 2, 4, 12, 5, 12),
-            Block.createCuboidShape(1, 1, 1, 15, 2, 15),
-            Block.createCuboidShape(0, 0, 0, 16, 1, 16),
-            Block.createCuboidShape(6, 5, 6, 10, 23, 10)
-    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+                    Block.createCuboidShape(2, 2, 4, 14, 3, 12),
+                    Block.createCuboidShape(2, 3, 7, 14, 20, 9),
+                    Block.createCuboidShape(3, 20, 7, 13, 21, 9),
+                    Block.createCuboidShape(3.8000000000000007, 21, 7, 12, 22, 9),
+                    Block.createCuboidShape(4.800000000000001, 22, 7, 11, 23, 9),
+                    Block.createCuboidShape(1, 1, 1, 15, 2, 15),
+                    Block.createCuboidShape(0, 0, 0, 16, 1, 16)
+            ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
     private static final VoxelShape SHAPE_S = Stream.of(
-            Block.createCuboidShape(4, 2, 4, 12, 5, 12),
+            Block.createCuboidShape(4, 2, 2, 12, 3, 14),
+            Block.createCuboidShape(7, 3, 2, 9, 20, 14),
+            Block.createCuboidShape(7, 20, 3, 9, 21, 13),
+            Block.createCuboidShape(7, 21, 3.8000000000000007, 9, 22, 12),
+            Block.createCuboidShape(7, 22, 4.800000000000001, 9, 23, 11),
             Block.createCuboidShape(1, 1, 1, 15, 2, 15),
-            Block.createCuboidShape(0, 0, 0, 16, 1, 16),
-            Block.createCuboidShape(6, 5, 6, 10, 23, 10)
+            Block.createCuboidShape(0, 0, 0, 16, 1, 16)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     private static final VoxelShape SHAPE_E = Stream.of(
-            Block.createCuboidShape(4, 2, 4, 12, 5, 12),
+            Block.createCuboidShape(2, 2, 4, 14, 3, 12),
+            Block.createCuboidShape(2, 3, 7, 14, 20, 9),
+            Block.createCuboidShape(3, 20, 7, 13, 21, 9),
+            Block.createCuboidShape(3.8000000000000007, 21, 7, 12, 22, 9),
+            Block.createCuboidShape(4.800000000000001, 22, 7, 11, 23, 9),
             Block.createCuboidShape(1, 1, 1, 15, 2, 15),
-            Block.createCuboidShape(0, 0, 0, 16, 1, 16),
-            Block.createCuboidShape(6, 5, 6, 10, 23, 10)
+            Block.createCuboidShape(0, 0, 0, 16, 1, 16)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     @Override

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#!#",
+    " # "
+  ],
+  "key": {
+    "#" : {
+      "item": "minecraft:sugar"
+    },
+    "!" : {
+      "item": "minecraft:blue_dye"
+    }
+  },
+
+  "result": {
+    "item": "harbingerofhistory:blue_candy_cane",
+    "count": 1
+  }
+}

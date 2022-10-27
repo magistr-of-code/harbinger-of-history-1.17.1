@@ -3,6 +3,16 @@
 
   "item.harbingerofhistory.tanzanite_dagger": "Тензанитовый кинжал",
 
+  "item.harbingerofhistory.candy_corn": "Кукурузная конфета",
+
+  "item.harbingerofhistory.purple_candy_cane": "Фиолетовый леденец",
+
+  "item.harbingerofhistory.blue_candy_cane": "Синый леденец",
+
+  "item.harbingerofhistory.red_candy_cane": "Красный леденец",
+
+  "item.harbingerofhistory.candy_lain": "Корзинка для конфет",
+
   "block.harbingerofhistory.scamp_ore": "Руда скампа",
 
   "block.harbingerofhistory.scamp_block": "Блок скампа",
@@ -15,11 +25,15 @@
 
   "block.harbingerofhistory.show_case": "Витрина",
 
+  "block.harbingerofhistory.wide_tomb_stone": "Широкий надгробный камень",
+
   "itemGroup.harbingerofhistory.tanzanite": "Тензанит",
 
   "itemGroup.harbingerofhistory.special": "Особый",
 
   "itemGroup.harbingerofhistory.scamp": "Скамп",
+
+  "itemGroup.harbingerofhistory.food": "Еда",
 
   "block.harbingerofhistory.piano": "Фортепиано",
 
@@ -33,7 +47,9 @@
 
   "block.harbingerofhistory.tomb_stone": "Могильный камень",
 
-  "text.harbingerofhistory.spawn_command_true": "Вы телепортировались на точку возрождения",
+  "block.harbingerofhistory.helloween_pumpkin": "Хеллоунская тыква",
+
+  "massage.harbingerofhistory.spawn_command_true": "Вы телепортировались на точку возрождения",
 
   "massage.harbingerofhistory.spawn_command_false": "Вы не можете быть телепортированы на точку возрождения",
 
@@ -41,5 +57,11 @@
 
   "massage.harbingerofhistory.dont_have_money": "У вас нету денег!",
 
-  "massage.harbingerofhistory.death_massage": "Деньги были взяты после смерти"
+  "massage.harbingerofhistory.death_massage": "Деньги были взяты после смерти",
+
+  "massage.harbingerofhistory.cook_dialog": "[Продавец еды] Здравствуйте. Вам нужна еда?",
+
+  "massage.harbingerofhistory.sweetness_or_nastiness_player": "[Я] Сладость или гадость!!?",
+
+  "massage.harbingerofhistory.sweetness_or_nastiness_entity": "[Гражданин] Сладость, сладость."
 }

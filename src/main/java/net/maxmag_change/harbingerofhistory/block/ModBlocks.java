@@ -5,10 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.maxmag_change.harbingerofhistory.HarbingerOfHistory;
 import net.maxmag_change.harbingerofhistory.block.custom.*;
 import net.maxmag_change.harbingerofhistory.item.ModItemGroup;
-import net.minecraft.block.Block;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.Material;
-import net.minecraft.block.WallBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -42,6 +39,13 @@ public class ModBlocks {
             new TombStone(FabricBlockSettings.of(Material.STONE).strength(2f)), ModItemGroup.SPECIAL);
     public static final Block LANTERN = registerBlock("lantern",
             new Lantern(FabricBlockSettings.of(Material.METAL).strength(2f).luminance(13)), ModItemGroup.SPECIAL);
+    public static final Block HELLOWEEN_PUMPKIN = registerBlock("helloween_pumpkin",
+            new Block(FabricBlockSettings.of(Material.BAMBOO).strength(1f)), ModItemGroup.SPECIAL);
+    public static final Block WIDE_TOMB_STONE = registerBlock("wide_tomb_stone",
+            new WideTombStone(FabricBlockSettings.of(Material.STONE).strength(2f)), ModItemGroup.SPECIAL);
+    public static final Block WIDE_TOMB_STONE_WITH_FLOWERS = registerBlock("wide_tomb_stone_with_flowers",
+            new WideTombStone(FabricBlockSettings.of(Material.STONE).strength(2f)), ModItemGroup.SPECIAL);
+
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);

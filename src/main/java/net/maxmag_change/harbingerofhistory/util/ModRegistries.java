@@ -12,7 +12,7 @@ public class ModRegistries {
 
     }
     private static void registerCommands() {
-        //CommandRegistrationCallback.EVENT.register(MoneyCommand::register);
+        CommandRegistrationCallback.EVENT.register(MoneyCommand::register);
         CommandRegistrationCallback.EVENT.register(SpawnCommand::register);
     }
 

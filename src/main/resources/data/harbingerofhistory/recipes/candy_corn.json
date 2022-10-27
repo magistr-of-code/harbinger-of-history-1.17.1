@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "",
+    "!@!",
+    "#%#"
+  ],
+  "key": {
+    "#" : {
+      "item": "minecraft:sugar"
+    },
+    "!" : {
+      "item": "minecraft:yellow_dye"
+    },
+    "@" : {
+      "item": "minecraft:orange_dye"
+    },
+    "%" : {
+      "item": "minecraft:honeycomb"
+    }
+  },
+
+  "result": {
+    "item": "harbingerofhistory:candy_corn",
+    "count": 1
+  }
+}

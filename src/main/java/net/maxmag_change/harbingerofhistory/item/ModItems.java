@@ -12,10 +12,20 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
     public static final Item EARTH_HARDENED_STEEL = registerItem("earth_hardened_steel",
             new Item(new FabricItemSettings().group(ModItemGroup.EARTH_HARDENED_STEEL)));
+    public static final Item RED_CANDY_CANE = registerItem("red_candy_cane",
+            new Item(new FabricItemSettings().group(ModItemGroup.FOOD).food(ModFoodComponents.CANDY_CANE)));
+    public static final Item PURPLE_CANDY_CANE = registerItem("purple_candy_cane",
+            new Item(new FabricItemSettings().group(ModItemGroup.FOOD).food(ModFoodComponents.CANDY_CANE)));
+    public static final Item BLUE_CANDY_CANE = registerItem("blue_candy_cane",
+            new Item(new FabricItemSettings().group(ModItemGroup.FOOD).food(ModFoodComponents.CANDY_CANE)));
+    public static final Item CANDY_CORN = registerItem("candy_corn",
+            new Item(new FabricItemSettings().group(ModItemGroup.FOOD).food(ModFoodComponents.CANDY_CORN)));
     public static final Item TANZANITE_DAGGER = registerItem("tanzanite_dagger",
             new SwordItem(ModToolMaterials.TANZANITE, 7, 1f, new FabricItemSettings().group(ModItemGroup.TANZANITE)));
     public static final Item COBBLESTONE_SHIELD = registerItem("cobblestone_shield",
             new ShieldItem(new FabricItemSettings().group(ModItemGroup.SPECIAL)));
+    public static final Item CANDY_LAIN = registerItem("candy_lain",
+            new Item(new FabricItemSettings().group(ModItemGroup.SPECIAL)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(HarbingerOfHistory.MOD_ID, name), item);

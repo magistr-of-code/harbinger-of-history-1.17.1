@@ -11,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.mob.Monster;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 
 public class KilledEntity implements ServerEntityCombatEvents.AfterKilledOtherEntity {
@@ -19,16 +20,16 @@ public class KilledEntity implements ServerEntityCombatEvents.AfterKilledOtherEn
     public void afterKilledOtherEntity(ServerWorld world, Entity entity, LivingEntity killedEntity) {
         EntityKills += 1;
         if (EntityKills >= 1 && !world.isClient) {
-            if (killedEntity instanceof WoodMonster) {
+            if (killedEntity instanceof WoodMonster && entity instanceof PlayerEntity) {
                 ClientPlayNetworking.send(ModMessages.WOOD_BOSS_MONEY_ID, PacketByteBufs.create());
                 EntityKills = EntityKills - 1;
-            } else if (killedEntity instanceof Monster) {
+            } else if (killedEntity instanceof Monster && entity instanceof PlayerEntity) {
                 ClientPlayNetworking.send(ModMessages.MONSTER_ENTITY_MONEY_ID, PacketByteBufs.create());
                 EntityKills = EntityKills - 1;
-            } else if (killedEntity instanceof WitherEntity) {
+            } else if (killedEntity instanceof WitherEntity && entity instanceof PlayerEntity) {
                 ClientPlayNetworking.send(ModMessages.WITHER_ENTITY_MONEY_ID, PacketByteBufs.create());
                 EntityKills = EntityKills - 1;
-            } else if(killedEntity instanceof EnderDragonEntity) {
+            } else if(killedEntity instanceof EnderDragonEntity && entity instanceof PlayerEntity) {
                 ClientPlayNetworking.send(ModMessages.DRAGON_ENTITY_MONEY_ID, PacketByteBufs.create());
                 EntityKills = EntityKills - 1;
             } else {

@@ -3,6 +3,16 @@
 
   "item.harbingerofhistory.tanzanite_dagger": "Tanzanite Dagger",
 
+  "item.harbingerofhistory.candy_corn": "Candy Corn",
+
+  "item.harbingerofhistory.purple_candy_cane": "Purple Candy Cane",
+
+  "item.harbingerofhistory.blue_candy_cane": "Blue Candy Cane",
+
+  "item.harbingerofhistory.red_candy_cane": "Red Candy Cane",
+
+  "item.harbingerofhistory.candy_lain": "Candy Lain",
+
   "block.harbingerofhistory.scamp_ore": "Scamp Ore",
 
   "block.harbingerofhistory.scamp_block": "Block of Scamp",
@@ -21,6 +31,8 @@
 
   "itemGroup.harbingerofhistory.scamp": "Scamp",
 
+  "itemGroup.harbingerofhistory.food": "Food",
+
   "block.harbingerofhistory.piano": "Piano",
 
   "block.harbingerofhistory.quartz_fence": "Quartz Fence",
@@ -33,6 +45,8 @@
 
   "block.harbingerofhistory.tomb_stone": "Tomb Stone",
 
+  "block.harbingerofhistory.wide_tomb_stone": "Wide Tomb Stone",
+
   "massage.harbingerofhistory.spawn_command_true": "You teleported to spawn",
 
   "massage.harbingerofhistory.spawn_command_false": "You cant't be teleported to spawn",
@@ -41,5 +55,11 @@
 
   "massage.harbingerofhistory.dont_have_money": "You don't have money!",
 
-  "massage.harbingerofhistory.death_massage": "Money taken from death"
+  "massage.harbingerofhistory.death_massage": "Money taken from death",
+
+  "massage.harbingerofhistory.cook_dialog": "[Food seller] Hello. Do you need some food?",
+
+  "massage.harbingerofhistory.sweetness_or_nastiness_player": "[Me] Sweetness or nastiness!!?",
+
+  "massage.harbingerofhistory.sweetness_or_nastiness_entity": "[A citizen] Sweetness, sweetness." 
 }

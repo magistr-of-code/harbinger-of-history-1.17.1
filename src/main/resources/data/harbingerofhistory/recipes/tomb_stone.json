@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "!#!",
+    " # ",
+    "!#!"
+  ],
+  "key": {
+    "#" : {
+      "item": "minecraft:andesite"
+    },
+    "!" : {
+      "item": "minecraft:andesite_slab"
+    }
+  },
+
+  "result": {
+    "item": "harbingerofhistory:tomb_stone",
+    "count": 1
+  }
+}
